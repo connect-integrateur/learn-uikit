@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Notification (toast)</title>
+  <link rel="stylesheet" href="../css/styles.css">
+</head>
+<body>
+
+<!--
+  Notification (toast)
+  Petits messages temporaires qui apparaissent dans un coin de l'écran. Leur apparition / disparition nécessite du JavaScript : cette page montre leur structure statique. Variantes : info (par défaut), succès, avertissement, danger. Positions : haut / bas, à gauche / au centre / à droite.
+-->
+
+<!-- Variante : succès -->
+<div role="status">
+  <h6>Tout est bon</h6>
+  <p>Action réalisée avec succès.</p>
+</div>
+
+<!-- Variante : danger -->
+<div role="status">
+  <h6>Oups</h6>
+  <p>Une erreur est survenue.</p>
+</div>
+
+<!-- Variante : avertissement -->
+<div role="status">
+  <h6>Attention</h6>
+  <p>Merci de vérifier cet avertissement.</p>
+</div>
+
+<!-- Variante : info (par défaut) -->
+<div role="status">
+  <h6>Pour information</h6>
+  <p>Nouvelle notification.</p>
+</div>
+
+<!-- Avec une action -->
+<!-- Variante : succès -->
+<div role="status">
+  <h6>Modifications enregistrées</h6>
+  <p>Votre document a été mis à jour.</p>
+  <!-- Variante : secondaire, taille petite -->
+  <button>OK</button>
+</div>
+
+</body>
+</html>

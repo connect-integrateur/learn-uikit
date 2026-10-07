@@ -1,0 +1,158 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Éléments de formulaire</title>
+  <link rel="stylesheet" href="../css/styles.css">
+</head>
+<body>
+
+<!--
+  Éléments de formulaire
+  Champs texte, listes déroulantes, zones de texte, cases à cocher, boutons radio et groupes de champs. Chaque champ est associé à son libellé (<label>).
+-->
+
+<form>
+  <!-- Chaque bloc « champ » regroupe un libellé, un contrôle et éventuellement une aide -->
+  <label>
+    Nom
+    <input type="text" placeholder="Votre nom">
+  </label>
+
+  <label>
+    E-mail
+    <input type="email" placeholder="vous@exemple.com">
+  </label>
+
+  <label>
+    Mot de passe
+    <input type="password" placeholder="Mot de passe" aria-describedby="aide-mot-de-passe">
+    <!-- Texte d'aide -->
+    <small id="aide-mot-de-passe">Ceci est un petit texte d'aide</small>
+  </label>
+
+  <div>
+    <label for="choix">Liste déroulante</label>
+    <select id="choix">
+      <option value="">Choisir une option</option>
+      <option value="a">Option A</option>
+      <option value="b">Option B</option>
+      <option value="c">Option C</option>
+      <option value="d">Option D</option>
+      <option value="e">Option E</option>
+      <option value="f">Option F</option>
+    </select>
+  </div>
+
+  <label>
+    Message
+    <textarea placeholder="Votre message..."></textarea>
+  </label>
+
+  <!-- État désactivé -->
+  <label aria-disabled="true">
+    Désactivé
+    <input type="text" placeholder="Désactivé" disabled>
+    <!-- Texte d'aide -->
+    <span>Ceci est un texte d'aide</span>
+  </label>
+
+  <label>
+    Fichier<br>
+    <input type="file">
+  </label>
+
+  <label>
+    Date et heure
+    <input type="datetime-local">
+  </label>
+
+  <label>
+    Date
+    <input type="date">
+  </label>
+
+  <label>
+    <input type="checkbox"> J'accepte les conditions
+    <!-- Texte d'aide -->
+    <span>Ceci est un texte d'aide</span>
+  </label>
+
+  <!-- Boutons radio côte à côte -->
+  <fieldset>
+    <legend>Préférence</legend>
+    <label><input type="radio" name="preference">Option A</label>
+    <label><input type="radio" name="preference">Option B</label>
+    <label><input type="radio" name="preference">Option C</label>
+  </fieldset>
+
+  <label>
+    Volume
+    <input type="range" min="0" max="100" value="50">
+    <!-- Texte d'aide -->
+    <span>Ceci est un texte d'aide</span>
+  </label>
+
+  <label>
+    État
+    <!-- Interrupteur : voir switch.html -->
+    <input type="checkbox" role="switch">
+    <!-- Texte d'aide -->
+    <span>Ceci est un texte d'aide</span>
+  </label>
+
+  <button type="submit">Envoyer</button>
+  <!-- Variante : secondaire -->
+  <button type="reset">Réinitialiser</button>
+</form>
+
+
+<!-- ===== Groupe de champs (champs et boutons accolés) ===== -->
+
+<fieldset>
+  <legend>https://</legend>
+  <input type="url" placeholder="sous-domaine" aria-label="Sous-domaine">
+  <select aria-label="Choisir un domaine">
+    <option value="" disabled selected>Choisir</option>
+    <option>.exemple.com</option>
+    <option>.exemple.net</option>
+  </select>
+  <button>OK</button>
+</fieldset>
+
+<fieldset>
+  <input type="text" placeholder="Rechercher" aria-label="Rechercher">
+  <button>OK</button>
+</fieldset>
+
+<fieldset>
+  <input type="text" placeholder="2" id="heures">
+  <label for="heures">heure(s)</label>
+  <input type="text" placeholder="30" id="minutes">
+  <label for="minutes">minute(s)</label>
+</fieldset>
+
+
+<!-- ===== Erreur de validation ===== -->
+<!-- aria-invalid="true" indique qu'un champ contient une erreur ; le message d'erreur est relié au champ par aria-describedby -->
+
+<fieldset>
+  <div>
+    <label for="email-erreur">E-mail</label>
+    <input type="email" id="email-erreur" aria-describedby="email-erreur-message" placeholder="Saisir un e-mail invalide" autocomplete="off">
+    <!-- Message d'erreur -->
+    <div id="email-erreur-message" role="status">Merci de saisir une adresse e-mail valide</div>
+  </div>
+
+  <!-- État : en erreur -->
+  <label aria-invalid="true">
+    Valeur secrète
+    <input type="password" id="nouveau-mot-de-passe" aria-invalid="true" aria-describedby="nouveau-mot-de-passe-erreur" placeholder="Nouvelle valeur secrète" value="abcdefg">
+    <!-- Message d'erreur -->
+    <span id="nouveau-mot-de-passe-erreur" role="status">La valeur est incorrecte</span>
+  </label>
+</fieldset>
+
+</body>
+</html>

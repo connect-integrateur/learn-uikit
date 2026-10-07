@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Onglets</title>
+  <link rel="stylesheet" href="../css/styles.css">
+</head>
+<body>
+
+<!--
+  Onglets
+  Interface à onglets avec les rôles ARIA tablist, tab et tabpanel. Le changement d'onglet au clic nécessite du JavaScript : ici, l'état affiché est figé sur le premier onglet (aria-selected="true") et les autres panneaux sont masqués (hidden).
+-->
+
+<div>
+  <div role="tablist" aria-label="Paramètres">
+    <!-- Onglet actif -->
+    <button role="tab" id="onglet-compte" aria-controls="panneau-compte" aria-selected="true">Compte</button>
+    <button role="tab" id="onglet-mot-de-passe" aria-controls="panneau-mot-de-passe" aria-selected="false" tabindex="-1">Mot de passe</button>
+    <button role="tab" id="onglet-notifications" aria-controls="panneau-notifications" aria-selected="false" tabindex="-1">Notifications</button>
+  </div>
+
+  <div role="tabpanel" id="panneau-compte" aria-labelledby="onglet-compte">
+    <h3>Paramètres du compte</h3>
+    <p>Gérez les informations de votre compte.</p>
+  </div>
+  <div role="tabpanel" id="panneau-mot-de-passe" aria-labelledby="onglet-mot-de-passe" hidden>
+    <h3>Mot de passe</h3>
+    <p>Modifiez votre mot de passe.</p>
+  </div>
+  <div role="tabpanel" id="panneau-notifications" aria-labelledby="onglet-notifications" hidden>
+    <h3>Notifications</h3>
+    <p>Configurez vos préférences de notification.</p>
+  </div>
+</div>
+
+</body>
+</html>

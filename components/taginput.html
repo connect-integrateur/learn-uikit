@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Champ de tags</title>
+  <link rel="stylesheet" href="../css/styles.css">
+</head>
+<body>
+
+<!--
+  Champ de tags
+  Champ où chaque mot validé (Entrée ou virgule) devient une étiquette supprimable. Le comportement nécessite du JavaScript : cette page montre l'état affiché avec deux tags déjà saisis.
+-->
+
+<!-- ===== Champ de tags ===== -->
+<div>
+  <!-- Tag (voir badge.html) avec son bouton de suppression -->
+  <span>pomme <button type="button" aria-label="Supprimer pomme">&times;</button></span>
+  <span>mangue <button type="button" aria-label="Supprimer mangue">&times;</button></span>
+  <input placeholder="Ajouter des tags..." maxlength="15" aria-label="Ajouter un tag">
+</div>
+
+
+<!-- ===== État désactivé ===== -->
+<div aria-disabled="true">
+  <span>pomme <button type="button" aria-label="Supprimer pomme" disabled>&times;</button></span>
+  <span>mangue <button type="button" aria-label="Supprimer mangue" disabled>&times;</button></span>
+  <input placeholder="Champ de tags désactivé..." maxlength="15" aria-label="Ajouter un tag" disabled>
+</div>
+
+
+<!-- ===== Avec suggestions (autocomplétion) ===== -->
+<!-- L'attribut list relie le champ à la liste de suggestions <datalist> -->
+<div>
+  <input list="liste-fruits" placeholder="Tapez un nom de fruit" aria-label="Ajouter un fruit">
+  <datalist id="liste-fruits">
+    <option value="Abricot">
+    <option value="Banane">
+    <option value="Cerise">
+    <option value="Mangue">
+    <option value="Melon">
+    <option value="Pomme">
+  </datalist>
+</div>
+
+</body>
+</html>

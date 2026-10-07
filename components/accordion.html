@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Accordéon</title>
+  <link rel="stylesheet" href="../css/styles.css">
+</head>
+<body>
+
+<!--
+  Accordéon
+  Sections repliables avec les éléments natifs <details> et <summary>. Aucun JavaScript nécessaire.
+-->
+
+<details>
+  <summary>Qu'est-ce que c'est ?</summary>
+  <p>Une bibliothèque de composants minimaliste basée sur du HTML sémantique.</p>
+</details>
+
+<details>
+  <summary>Comment l'utiliser ?</summary>
+  <p>On écrit du HTML sémantique, puis on le met en forme avec du CSS.</p>
+</details>
+
+<details>
+  <summary>Est-ce accessible ?</summary>
+  <p>Oui ! Les éléments natifs sont utilisables au clavier et compris par les lecteurs d'écran.</p>
+</details>
+
+<!-- Accordéon groupé : l'attribut name identique fait qu'un seul élément peut être ouvert à la fois -->
+<details name="groupe">
+  <summary>Cet élément est groupé avec le suivant</summary>
+  <p>L'attribut <code>name</code> regroupe les éléments, comme des boutons radio.</p>
+</details>
+
+<details name="groupe">
+  <summary>Cet élément est groupé avec le précédent</summary>
+  <p>L'attribut <code>name</code> regroupe les éléments, comme des boutons radio.</p>
+</details>
+
+</body>
+</html>

@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Menu déroulant</title>
+  <link rel="stylesheet" href="../css/styles.css">
+</head>
+<body>
+
+<!--
+  Menu déroulant
+  Menu et popover avec l'API native popover (attributs popovertarget et popover). Fonctionne sans JavaScript ; la navigation au clavier avec les flèches et le positionnement sous le bouton nécessitent du JS ou du CSS (anchor positioning).
+-->
+
+<!-- ===== Menu déroulant ===== -->
+<div>
+  <!-- Style : contour -->
+  <button popovertarget="menu-demo">
+    Options
+    <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><path d="m6 9 6 6 6-6" /></svg>
+  </button>
+  <div popover id="menu-demo" role="menu" aria-label="Options">
+    <!-- Les éléments du menu : style fantôme -->
+    <button role="menuitem">Profil</button>
+    <button role="menuitem" popovertarget="menu-demo" popovertargetaction="hide">Cliquer pour fermer</button>
+    <button role="menuitem">Aide</button>
+    <a href="#" role="menuitem">Lien</a>
+    <hr>
+    <button role="menuitem">Déconnexion</button>
+    <!-- Variante : danger -->
+    <button role="menuitem">
+      <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><polyline points="3 6 5 6 21 6"></polyline><path d="M19 6v14a2 2 0 0 1-2 2H7a2 2 0 0 1-2-2V6m3 0V4a2 2 0 0 1 2-2h4a2 2 0 0 1 2 2v2"></path><line x1="10" y1="11" x2="10" y2="17"></line><line x1="14" y1="11" x2="14" y2="17"></line></svg>
+      Supprimer
+    </button>
+  </div>
+</div>
+
+
+<!-- ===== Popover (carte de confirmation) ===== -->
+<div>
+  <!-- Style : contour -->
+  <button popovertarget="confirmation-demo">
+    Confirmer
+  </button>
+  <article popover id="confirmation-demo">
+    <header>
+      <h4>Êtes-vous sûr ?</h4>
+      <p>Cette action est irréversible.</p>
+    </header>
+    <footer>
+      <!-- Style : contour, taille petite -->
+      <button popovertarget="confirmation-demo">Annuler</button>
+      <!-- Variante : danger, taille petite -->
+      <button popovertarget="confirmation-demo">Supprimer</button>
+    </footer>
+  </article>
+</div>
+
+</body>
+</html>

@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Barre latérale</title>
+  <link rel="stylesheet" href="../css/styles.css">
+</head>
+<body>
+
+<!--
+  Barre latérale
+  Mise en page de type tableau de bord : barre du haut fixe, barre latérale fixe et contenu principal qui défile. Sur mobile, la barre latérale devient un panneau coulissant ouvert par le bouton menu (nécessite un peu de JavaScript).
+-->
+
+<!-- Barre du haut (optionnelle), sur toute la largeur -->
+<header>
+  <button aria-label="Ouvrir / fermer le menu" aria-controls="barre-laterale" aria-expanded="false">☰</button>
+  <span>Nom de l'application</span>
+</header>
+
+<!-- Barre latérale -->
+<aside id="barre-laterale">
+  <header>Logo</header>
+  <nav>
+    <ul>
+      <li><a href="#" aria-current="page">Accueil</a></li>
+      <li><a href="#">Utilisateurs</a></li>
+      <li>
+        <!-- Sous-menu repliable -->
+        <details open>
+          <summary>Paramètres</summary>
+          <ul>
+            <li><a href="#">Général</a></li>
+            <li><a href="#">Sécurité</a></li>
+            <li><a href="#">Facturation</a></li>
+          </ul>
+        </details>
+      </li>
+    </ul>
+  </nav>
+  <footer>
+    <!-- Style : contour, taille petite, pleine largeur -->
+    <button>Déconnexion</button>
+  </footer>
+</aside>
+
+<!-- Contenu principal -->
+<main>
+  <p>Zone de contenu principal. Elle défile avec la page.</p>
+</main>
+
+</body>
+</html>

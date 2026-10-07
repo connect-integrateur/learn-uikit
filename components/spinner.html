@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Indicateur de chargement</title>
+  <link rel="stylesheet" href="../css/styles.css">
+</head>
+<body>
+
+<!--
+  Indicateur de chargement
+  aria-busy="true" indique qu'un élément est en cours de chargement. Tailles : petite, normale, grande.
+-->
+
+<div>
+  <!-- Taille : petite -->
+  <div aria-busy="true"></div>
+
+  <!-- Taille : normale (par défaut) -->
+  <div aria-busy="true"></div>
+
+  <!-- Taille : grande -->
+  <div aria-busy="true"></div>
+
+  <!-- Bouton en chargement : indicateur petite taille -->
+  <button aria-busy="true" disabled>Chargement</button>
+</div>
+
+
+<!-- ===== Superposition (overlay) ===== -->
+<!-- Le contenu de la carte est assombri et l'indicateur (grande taille) s'affiche par-dessus -->
+<article aria-busy="true">
+  <header>
+    <h3>Titre de la carte</h3>
+    <p>La description de la carte.</p>
+  </header>
+  <p>Le contenu de la carte. Il peut contenir n'importe quel HTML.</p>
+  <footer>
+    <!-- Style : contour -->
+    <button>Annuler</button>
+    <button>Enregistrer</button>
+  </footer>
+</article>
+
+</body>
+</html>

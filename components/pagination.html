@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Pagination</title>
+  <link rel="stylesheet" href="../css/styles.css">
+</head>
+<body>
+
+<!--
+  Pagination
+  Navigation entre les pages. Réutilise le groupe de boutons (voir button.html) avec des liens. aria-current="page" indique la page active.
+-->
+
+<nav aria-label="Pagination">
+  <!-- Chaque lien a l'apparence d'un bouton : style contour, taille petite -->
+  <menu>
+    <li><a href="#">&larr; Précédent</a></li>
+    <li><a href="#">1</a></li>
+    <li><a href="#">2</a></li>
+    <!-- Page active : style plein (sans contour) -->
+    <li><a href="#" aria-current="page">3</a></li>
+    <li><a href="#">4</a></li>
+    <li><a href="#">5</a></li>
+    <li><a href="#">Suivant &rarr;</a></li>
+  </menu>
+</nav>
+
+</body>
+</html>

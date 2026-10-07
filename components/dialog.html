@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Boîte de dialogue</title>
+  <link rel="stylesheet" href="../css/styles.css">
+</head>
+<body>
+
+<!--
+  Boîte de dialogue
+  Fenêtre modale avec l'élément natif <dialog>. Les attributs commandfor et command ouvrent/ferment la modale sans JavaScript.
+-->
+
+<!-- ===== Boîte de dialogue simple ===== -->
+<button commandfor="dialogue-demo" command="show-modal">Ouvrir la boîte de dialogue</button>
+
+<!-- closedby="any" : se ferme aussi en cliquant à l'extérieur ou avec Échap -->
+<dialog id="dialogue-demo" closedby="any">
+  <form method="dialog">
+    <header>
+      <h3>Titre</h3>
+      <p>La description de la boîte de dialogue.</p>
+    </header>
+    <div>
+      <p>Le contenu de la boîte de dialogue. Il peut contenir n'importe quel HTML.</p>
+      <p>Cliquez à l'extérieur ou appuyez sur Échap pour fermer.</p>
+    </div>
+    <footer>
+      <!-- Style : contour -->
+      <button type="button" commandfor="dialogue-demo" command="close">Annuler</button>
+      <button value="confirmer">Confirmer</button>
+    </footer>
+  </form>
+</dialog>
+
+
+<!-- ===== Boîte de dialogue avec formulaire ===== -->
+<button commandfor="dialogue-formulaire" command="show-modal">Ouvrir le formulaire</button>
+
+<dialog id="dialogue-formulaire">
+  <form method="dialog">
+    <header>
+      <h3>Modifier</h3>
+    </header>
+    <div>
+      <label>Nom <input name="nom" required></label>
+      <label>E-mail <input name="email" type="email"></label>
+    </div>
+    <footer>
+      <!-- Style : contour -->
+      <button type="button" commandfor="dialogue-formulaire" command="close">Annuler</button>
+      <button value="enregistrer">Enregistrer</button>
+    </footer>
+  </form>
+</dialog>
+
+</body>
+</html>

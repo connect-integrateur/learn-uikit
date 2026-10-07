@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Fil d'Ariane</title>
+  <link rel="stylesheet" href="../css/styles.css">
+</head>
+<body>
+
+<!--
+  Fil d'Ariane
+  Navigation hiérarchique avec <nav> et une liste ordonnée. aria-current="page" indique la page active.
+-->
+
+<nav aria-label="Fil d'Ariane">
+  <ol>
+    <li><a href="#">Accueil</a></li>
+    <li aria-hidden="true">/</li>
+    <li><a href="#">Projets</a></li>
+    <li aria-hidden="true">/</li>
+    <li><a href="#">Documentation</a></li>
+    <li aria-hidden="true">/</li>
+    <li><a href="#" aria-current="page"><strong>Fil d'Ariane</strong></a></li>
+  </ol>
+</nav>
+
+</body>
+</html>

@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Interrupteur</title>
+  <link rel="stylesheet" href="../css/styles.css">
+</head>
+<body>
+
+<!--
+  Interrupteur
+  Case à cocher avec role="switch", affichée comme un interrupteur on/off. Aucun JavaScript nécessaire.
+-->
+
+<label>
+  <input type="checkbox" role="switch"> Notifications
+</label>
+<label>
+  <input type="checkbox" role="switch" checked> Mode sombre
+</label>
+
+
+<!-- ===== Désactivé ===== -->
+<label>
+  <input type="checkbox" role="switch" disabled> Désactivé (éteint)
+</label>
+<label>
+  <input type="checkbox" role="switch" checked disabled> Désactivé (allumé)
+</label>
+
+</body>
+</html>

@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Tableau</title>
+  <link rel="stylesheet" href="../css/styles.css">
+</head>
+<body>
+
+<!--
+  Tableau
+  Tableau de données avec <thead>, <tbody> et <tfoot>. Le conteneur autour du tableau permet un défilement horizontal sur petit écran.
+-->
+
+<div>
+  <table>
+    <thead>
+      <tr>
+        <th>Nom</th>
+        <th>E-mail</th>
+        <th>Rôle</th>
+        <th>Statut</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td>Camille Leroy</td>
+        <td>camille@exemple.com</td>
+        <td>Admin</td>
+        <!-- Badge : variante succès -->
+        <td><span>Actif</span></td>
+      </tr>
+      <tr>
+        <td>Lucas Moreau</td>
+        <td>lucas@exemple.com</td>
+        <td>Éditeur</td>
+        <!-- Badge : par défaut -->
+        <td><span>Actif</span></td>
+      </tr>
+      <tr>
+        <td>Inès Petit</td>
+        <td>ines@exemple.com</td>
+        <td>Lecteur</td>
+        <!-- Badge : variante secondaire -->
+        <td><span>En attente</span></td>
+      </tr>
+      <tr>
+        <td>Hugo Roux</td>
+        <td>hugo@exemple.com</td>
+        <td>Éditeur</td>
+        <!-- Badge : par défaut -->
+        <td><span>Actif</span></td>
+      </tr>
+      <tr>
+        <td>Léa Fournier</td>
+        <td>lea@exemple.com</td>
+        <td>Admin</td>
+        <!-- Badge : variante succès -->
+        <td><span>Actif</span></td>
+      </tr>
+    </tbody>
+    <tfoot>
+      <tr>
+        <th>Nom</th>
+        <th>E-mail</th>
+        <th>Rôle</th>
+        <th>Statut</th>
+      </tr>
+    </tfoot>
+  </table>
+</div>
+
+</body>
+</html>

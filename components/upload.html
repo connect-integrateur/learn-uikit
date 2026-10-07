@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Envoi de fichiers</title>
+  <link rel="stylesheet" href="../css/styles.css">
+</head>
+<body>
+
+<!--
+  Envoi de fichiers
+  Zone de dépôt de fichiers (clic ou glisser-déposer) autour d'un champ natif <input type="file">. Le glisser-déposer et l'affichage des fichiers choisis nécessitent du JavaScript.
+-->
+
+<div>
+  <!-- Le champ natif est caché : c'est le bouton qui ouvre le sélecteur de fichiers -->
+  <input type="file" id="pieces-jointes" name="pieces-jointes" multiple hidden>
+  <strong>Pièces jointes</strong>
+
+  <!-- Style : fantôme -->
+  <button type="button" aria-label="Choisir des fichiers">
+    <svg width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" aria-hidden="true"><path d="M12 16V4m0 0 4 4m-4-4-4 4" /><path d="M20 16v4H4v-4" /></svg>
+  </button>
+
+  <!-- Liste des fichiers choisis (vide au départ) -->
+  <div>
+    <!-- Texte d'aide -->
+    <small>Déposez des fichiers ici ou cliquez pour les choisir</small>
+  </div>
+</div>
+
+</body>
+</html>
